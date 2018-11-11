@@ -2,6 +2,7 @@
 // modified from https://bitbucket.org/duangle/liminal/src/tip/src/liminal/imgui_dock.h
 
 #pragma once
+#include "dear-imgui/imconfig.h"
 
 // Forward declarations
 typedef int ImGuiWindowFlags;

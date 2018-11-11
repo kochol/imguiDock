@@ -1,10 +1,10 @@
 // based on https://github.com/nem0/LumixEngine/blob/master/external/imgui/imgui_dock.inl
 // modified from https://bitbucket.org/duangle/liminal/src/tip/src/liminal/imgui_dock.cpp
 
-#include "imgui.h"
+#include "dear-imgui/imgui.h"
 #define IMGUI_DEFINE_PLACEMENT_NEW
 #define IMGUI_DEFINE_MATH_OPERATORS
-#include "imgui_internal.h"
+#include "dear-imgui/imgui_internal.h"
 #include "imgui_dock.h"
 
 // for string comparasion(could be replaced)
@@ -495,8 +495,8 @@ struct DockContext
 
 		Begin("##Overlay",
 			NULL,
-			ImVec2(0, 0),
-			0.f,
+//			ImVec2(0, 0),
+//			0.f,
 			ImGuiWindowFlags_Tooltip | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove |
 				ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoSavedSettings |
 				ImGuiWindowFlags_AlwaysAutoResize);
@@ -989,8 +989,8 @@ struct DockContext
 			SetNextWindowSize(dock.size);
 			bool ret = Begin(label,
 				opened,
-				dock.size,
-				-1.0f,
+//				dock.size,
+//				-1.0f,
 				ImGuiWindowFlags_NoCollapse /*| ImGuiWindowFlags_ShowBorders*/ | extra_flags); // ImGuiWindowFlags_ShowBorders not used in new version of ImGui
 			m_end_action = EndAction_End;
 			dock.pos = GetWindowPos();
